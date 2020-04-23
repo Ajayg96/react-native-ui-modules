@@ -22,18 +22,17 @@ Cross platform react native components
 
 - [Install](#install)
 - [Components](#components)
-- [Example](#example)
 - [License](#license)
 
 ## Install
 
-[npm][]:
+npm:
 
 ```sh
 npm install react-native-ui-modules
 ```
 
-[yarn][]:
+yarn:
 
 ```sh
 yarn add react-native-ui-modules
@@ -55,6 +54,15 @@ This component inherits all native TextInput props along with the following:-
 | borderColor       | String                                |
 | borderBottomColor | String                                |
 
+```js
+import React from "react";
+import { Input } from "react-native-ui-modules";
+
+const InputComponent = () => {
+  return <Input variant="outlined" inputWidth="85%" placeholder="Username" />;
+};
+```
+
 - Spinner
 
 | Property        | Type                            |
@@ -64,6 +72,41 @@ This component inherits all native TextInput props along with the following:-
 | backgroundColor | String                          |
 | onClose         | Function                        |
 | color           | String                          |
+
+```js
+import React, { useState } from "react";
+import { Spinner } from "react-native-ui-modules";
+import { View, Button, StyleSheet } from "react-native";
+
+const SpinnerComponent = () => {
+  const [visible, setSpinner] = useState(false);
+  const toggleSpinner = () => {
+    setSpinner(!visible);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title="Show spinner" onPress={toggleSpinner} />
+      <Spinner
+        color="red"
+        size="small"
+        backgroundColor="#FFF"
+        visible={visible}
+        onClose={toggleSpinner}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#FFF",
+  },
+});
+```
 
 - Snackbar
 
@@ -77,17 +120,6 @@ This component inherits all native TextInput props along with the following:-
 | actionTextColor  | String                         |
 | backgroundColor  | String                         |
 | handleAction     | Function                       |
-
-## Example
-
-```js
-import React from "react";
-import { Input } from "react-native-ui-modules";
-
-const InputComponent = () => {
-  return <Input variant="outlined" inputWidth="85%" placeholder="Username" />;
-};
-```
 
 ```js
 import React, { useState } from "react";
@@ -112,41 +144,6 @@ const SnackbarComponent = () => {
         messageTextColor="#FFFFFF"
         actionTextColor="#AB2611"
         handleAction={toggleSnackbar}
-      />
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FFF",
-  },
-});
-```
-
-```js
-import React, { useState } from "react";
-import { Spinner } from "react-native-ui-modules";
-import { View, Button, StyleSheet } from "react-native";
-
-const SpinnerComponent = () => {
-  const [visible, setSpinner] = useState(false);
-  const toggleSpinner = () => {
-    setSpinner(!visible);
-  };
-
-  return (
-    <View style={styles.container}>
-      <Button title="Show spinner" onPress={toggleSpinner} />
-      <Spinner
-        color="red"
-        size="small"
-        backgroundColor="#FFF"
-        visible={visible}
-        onClose={toggleSpinner}
       />
     </View>
   );
