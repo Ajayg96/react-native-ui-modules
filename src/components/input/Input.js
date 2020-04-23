@@ -25,7 +25,7 @@ Input.propTypes = {
   borderColor: PropTypes.string,
   borderRadius: PropTypes.number,
   borderBottomColor: PropTypes.string,
-  variant: PropTypes.oneOf(["outline", "standard"]),
+  variant: PropTypes.oneOf(["outlined", "standard"]),
 };
 
 export default Input;
