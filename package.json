@@ -1,5 +1,5 @@
 {
-  "name": "react-native-components",
+  "name": "react-native-ui-modules",
   "version": "1.0.0",
   "description": "Cross platform react native components",
   "main": "index.js",
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ajayg96/react-native-components.git"
+    "url": "git+https://github.com/Ajayg96/react-native-ui-modules.git"
   },
   "author": "Ajay",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ajayg96/react-native-components/issues"
+    "url": "https://github.com/Ajayg96/react-native-ui-modules/issues"
   },
   "keywords": [
     "react",
     "react-native",
     "react-native-component"
   ],
-  "homepage": "https://github.com/Ajayg96/react-native-components#readme",
+  "homepage": "https://github.com/Ajayg96/react-native-ui-modules#readme",
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.59.0"
   },

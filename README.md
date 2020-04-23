@@ -17,3 +17,8 @@ Cross platform react native components
 `react-native-cli >= 2.0.1`
 `react-native >= 0.61`
 `npm >= 5.6.0`
+
+### Install
+
+`npm install react-native-ui-modules`
+`yarn add react-native-ui-modules`
