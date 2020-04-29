@@ -6,7 +6,7 @@ Cross platform react native components
   <img src="https://badgen.net/badge/npm/>=5.6.0/blue">
   <img src="https://badgen.net/badge/react-native/>=0.60/orange">
   <img src="https://badgen.net/badge/code style/standard/yellow">
-  <img src="https://badgen.net/badge/release/v1.0.0/pink">
+  <img src="https://badgen.net/badge/release/v1.0.2/pink">
 </div>
 
 ## Getting Started
@@ -26,21 +26,35 @@ Cross platform react native components
 
 ## Install
 
+This package uses react-native-vector-icons, you can follow the installation instructions here
+[this](https://github.com/oblador/react-native-vector-icons#installation)
+
 npm:
 
 ```sh
+npm install --save react-native-vector-icons
 npm install react-native-ui-modules
 ```
 
 yarn:
 
 ```sh
+yarn add react-native-vector-icons
 yarn add react-native-ui-modules
 ```
 
 ## Components
 
-- Input
+- [Input](#input)
+- [Icon](#icon)
+- [Snackbar](#snackbar)
+- [Spinner](#spinner)
+- [Button](#button)
+- [Card](#card)
+- [Accordion](#accordion)
+- [Picker](#picker)
+
+## Input
 
 This component inherits all native TextInput props along with the following:-
 
@@ -53,17 +67,83 @@ This component inherits all native TextInput props along with the following:-
 | borderRadius      | Number                                |
 | borderColor       | String                                |
 | borderBottomColor | String                                |
+| startIcon         | Boolean                               |
+| icon              | Object                                |
+| endIcon           | Object                                |
+| type              | String (enum - "passwod")             |
+| passwordHidden    | Boolean                               |
+| togglePassword    | Function                              |
 
 ```js
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "react-native-ui-modules";
 
 const InputComponent = () => {
-  return <Input variant="outlined" inputWidth="85%" placeholder="Username" />;
+  const [passwordHidden, setPasswordHidden] = useState(true);
+  return (
+    <>
+      <Input
+        inputWidth="80%"
+        variant="standard"
+        startIcon={true}
+        icon={{
+          iconSize: 23,
+          iconName: "person",
+          iconColor: "black",
+          iconType: "materialIcon",
+        }}
+        placeholder="Username"
+      />
+
+      <Input
+        inputWidth="70%"
+        startIcon={true}
+        variant="standard"
+        type="password"
+        passwordHidden={passwordHidden}
+        togglePassword={() => setPasswordHidden(!passwordHidden)}
+        icon={{
+          iconSize: 23,
+          iconName: "lock",
+          iconColor: "gray",
+          iconType: "materialIcon",
+        }}
+        endIcon={{
+          iconSize: 23,
+          iconColor: "gray",
+          iconType: "materialIcon",
+          passwordOnIcon: "visibility",
+          passwordOffIcon: "visibility-off",
+        }}
+        placeholder="Password"
+      />
+    </>
+  );
 };
 ```
 
-- Spinner
+## Icon
+
+This component inherits react-native-vector-icons property:
+List of icons available: [this](https://oblador.github.io/react-native-vector-icons/)
+
+| Property | Type                                                                                                                                                                                                     |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name     | String                                                                                                                                                                                                   |
+| size     | Number                                                                                                                                                                                                   |
+| type     | String(enum - "materialIcon", "antDesign", "materialCommunityIcon", "entypo", "zocial", "feather", "ionIcons", "octIcons", "evilIcons", "foundation", "fontAwesome", "fontAwesome5", "simpleLineIcons"), |
+| color    | String                                                                                                                                                                                                   |
+
+```js
+import React from "react";
+import { Icon } from "react-native-ui-modules";
+
+const IconComponent = () => {
+  return <Icons size={24} name="home" color="#343434" type="materialIcon" />;
+};
+```
+
+## Spinner
 
 | Property        | Type                            |
 | --------------- | ------------------------------- |
@@ -108,7 +188,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-- Snackbar
+## Snackbar
 
 | Property         | Type                           |
 | ---------------- | ------------------------------ |
@@ -157,6 +237,155 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFF",
   },
 });
+```
+
+## Button
+
+| Property    | Type                                             |
+| ----------- | ------------------------------------------------ |
+| title       | String                                           |
+| color       | String(enum - "primary", "secondary", "default") |
+| buttonWidth | String                                           |
+| variant     | String(enum - "contained", "outlined")           |
+| endIcon     | Object                                           |
+| titleColor  | String                                           |
+| titleStyle  | Object                                           |
+| buttonColor | String                                           |
+| buttonStyle | Object                                           |
+| onPress     | Function                                         |
+
+```js
+import React from "react";
+import { Button } from "react-native-ui-modules";
+
+const ButtonComponent = () => {
+  return (
+    <Button
+      title="Continue"
+      color="default"
+      buttonWidth="85%"
+      variant="contained"
+      endIcon={{
+        iconSize: 23,
+        iconName: "chevron-right",
+        iconColor: "white",
+        iconType: "materialIcon",
+      }}
+      titleColor="white"
+      onPress={() => console.log("buttonPress")}
+    />
+  );
+};
+```
+
+## Card
+
+| Property        | Type     |
+| --------------- | -------- |
+| cardBorder      | Number   |
+| cardWidth       | String   |
+| cardColor       | String   |
+| cardHeight      | Number   |
+| headerTextStyle | Object   |
+| headerStyle     | Object   |
+| onPress         | Function |
+
+```js
+import React from "react";
+import { Text } from "react-native";
+import { Card } from "react-native-ui-modules";
+
+const ButtonComponent = () => {
+  return (
+    <Card
+      cardBorder={0}
+      cardWidth="90%"
+      cardColor="#fff"
+      cardHeight={200}
+      cardTitle="Card Header"
+      onPress={() => console.log("card pressed")}
+      headerTextStyle={{ color: "blue" }}
+      headerStyle={{ alignItems: "flex-start" }}
+    >
+      <Text style={{ textAlign: "center" }}>Card Content</Text>
+    </Card>
+  );
+};
+```
+
+## Accordion
+
+| Property         | Type     |
+| ---------------- | -------- |
+| bgColor          | Number   |
+| width            | String   |
+| heading          | String   |
+| secondaryHeading | String   |
+| expanded         | Boolean  |
+| secondaryStyle   | Object   |
+| headingStyle     | Object   |
+| onChange         | Function |
+
+```js
+import React, { useState } from "react";
+import { Text } from "react-native";
+import { Accordion } from "react-native-ui-modules";
+
+const AccordionComponent = () => {
+  const [expanded, setExpanded] = useState(fasle);
+  return (
+    <Accordion
+      width="80%"
+      bgColor="#fff"
+      heading="Heading"
+      expanded={expanded}
+      secondaryHeading="Secondary heading"
+      onChange={() => setExpanded(!expanded)}
+    >
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam.
+      </Text>
+    </Accordion>
+  );
+};
+```
+
+## Picker
+
+| Property        | Type     |
+| --------------- | -------- |
+| bgColor         | Number   |
+| width           | String   |
+| pickerItems     | Array    |
+| selectedItem    | String   |
+| expanded        | Boolean  |
+| onValueChange   | Function |
+| onChange        | Function |
+| pickerItemStyle | Object   |
+| pickerTextStyle | Object   |
+
+```js
+import React, { useState } from "react";
+import { Picker } from "react-native-ui-modules";
+
+const PickerComponent = () => {
+  const [expanded, setExpanded] = useState(fasle);
+  const [selectedItem, setSelectedItem] = useState("");
+  const pickerItems = ["Apple", "Orange"];
+  return (
+    <Picker
+      width="90%"
+      bgColor="#fff"
+      expanded={expanded}
+      pickerItems={pickerItems}
+      selectedItem={selectedItem}
+      onValueChange={(item) => setSelectedItem(item)}
+      onChange={() => setExpanded(!expanded)}
+    />
+  );
+};
 ```
 
 ## License

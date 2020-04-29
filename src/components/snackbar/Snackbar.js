@@ -36,11 +36,11 @@ const Snackbar = (props) => {
 };
 
 Snackbar.propTypes = {
-  visible: PropTypes.bool,
-  message: PropTypes.string,
   handleAction: PropTypes.func,
   actionText: PropTypes.string,
+  visible: PropTypes.bool.isRequired,
   backgroundColor: PropTypes.string,
+  message: PropTypes.string.isRequired,
   messageTextColor: PropTypes.string,
   actionTextColor: PropTypes.string,
   position: PropTypes.oneOf(["top", "bottom"]),

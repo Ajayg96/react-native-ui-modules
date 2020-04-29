@@ -20,9 +20,9 @@ const Spinner = (props) => {
 };
 
 Spinner.propTypes = {
-  visible: PropTypes.bool,
   onClose: PropTypes.func,
   color: PropTypes.string,
+  visible: PropTypes.bool.isRequired,
   backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(["small", "large"]),
 };

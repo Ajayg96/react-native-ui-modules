@@ -1,6 +1,6 @@
 {
   "name": "react-native-ui-modules",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cross platform react native components",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,9 @@
   "homepage": "https://github.com/Ajayg96/react-native-ui-modules#readme",
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.59.0"
+  },
+  "peerDependencies": {
+    "react-native-vector-icons": ">6.0.0"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
