@@ -21,7 +21,7 @@ const Picker = (props) => {
       {props.expanded &&
         props.pickerItems.map((item, index) => (
           <TouchableOpacity
-            index={index}
+            key={index}
             activeOpacity={1}
             onPress={() => {
               props.onChange();
@@ -39,13 +39,13 @@ const Picker = (props) => {
 Picker.propTypes = {
   bgColor: PropTypes.string,
   selectedItem: PropTypes.string,
-  onValueChange: PropTypes.func,
   pickerTextStyle: PropTypes.object,
   pickerItemStyle: PropTypes.object,
-  width: PropTypes.number.isRequired,
+  width: PropTypes.string.isRequired,
   expanded: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
   pickerItems: PropTypes.array.isRequired,
+  onValueChange: PropTypes.func.isRequired,
 };
 
 const styles = (props) =>
