@@ -26,8 +26,7 @@ Cross platform react native components
 
 ## Install
 
-This package uses react-native-vector-icons, you can follow the installation instructions here
-[this](https://github.com/oblador/react-native-vector-icons#installation)
+This package uses react-native-vector-icons, you can follow [this](https://github.com/oblador/react-native-vector-icons#installation) installation instructions
 
 npm:
 
@@ -125,7 +124,7 @@ const InputComponent = () => {
 ## Icon
 
 This component inherits react-native-vector-icons property:
-List of icons available: [this](https://oblador.github.io/react-native-vector-icons/)
+List of icons available: [https://oblador.github.io/react-native-vector-icons/]
 
 | Property | Type                                                                                                                                                                                                     |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
