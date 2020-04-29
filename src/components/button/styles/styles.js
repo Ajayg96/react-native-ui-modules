@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { shadow, ThemeColor } from "../../static/constants";
+import { shadow, ThemeColor } from "../../../static/constants";
 
 const button = (props) => ({
   ...shadow,

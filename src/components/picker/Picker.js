@@ -19,8 +19,9 @@ const Picker = (props) => {
         <Icon size={23} color="#000" name="keyboard-arrow-down" />
       </View>
       {props.expanded &&
-        props.pickerItems.map((item) => (
+        props.pickerItems.map((item, index) => (
           <TouchableOpacity
+            index={index}
             activeOpacity={1}
             onPress={() => {
               props.onChange();
