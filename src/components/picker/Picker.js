@@ -16,7 +16,12 @@ const Picker = (props) => {
           {props.selectedItem ? "Selected: " : "Select"}
           {props.selectedItem}
         </Text>
-        <Icon size={23} color="#000" name="keyboard-arrow-down" />
+        <Icon
+          size={23}
+          color="#000"
+          type="materialIcon"
+          name="arrow-drop-down"
+        />
       </View>
       {props.expanded &&
         props.pickerItems.map((item, index) => (

@@ -7,7 +7,7 @@ const Snackbar = (props) => {
   return (
     <Modal
       transparent
-      animationType="slide"
+      animationType="fade"
       visible={props.visible}
       onRequestClose={() => props.handleAction()}
     >

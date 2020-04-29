@@ -24,9 +24,10 @@ const styles = (props) =>
       bottom: 20,
     },
     buttonText: {
-      color: props.actionTextColor,
       fontWeight: "bold",
       textAlign: "center",
+      textTransform: "uppercase",
+      color: props.actionTextColor,
     },
   });
 

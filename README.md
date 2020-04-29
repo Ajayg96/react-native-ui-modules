@@ -31,14 +31,12 @@ This package uses react-native-vector-icons, you can follow [this](https://githu
 npm:
 
 ```sh
-npm install --save react-native-vector-icons
 npm install react-native-ui-modules
 ```
 
 yarn:
 
 ```sh
-yarn add react-native-vector-icons
 yarn add react-native-ui-modules
 ```
 
@@ -95,7 +93,7 @@ const InputComponent = () => {
       />
 
       <Input
-        inputWidth="70%"
+        inputWidth="80%"
         startIcon={true}
         variant="standard"
         type="password"
@@ -124,7 +122,6 @@ const InputComponent = () => {
 ## Icon
 
 This component inherits react-native-vector-icons property:
-List of icons available: [https://oblador.github.io/react-native-vector-icons/]
 
 | Property | Type                                                                                                                                                                                                     |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -138,7 +135,7 @@ import React from "react";
 import { Icon } from "react-native-ui-modules";
 
 const IconComponent = () => {
-  return <Icons size={24} name="home" color="#343434" type="materialIcon" />;
+  return <Icon size={24} name="home" color="#343434" type="materialIcon" />;
 };
 ```
 
@@ -262,7 +259,7 @@ const ButtonComponent = () => {
     <Button
       title="Continue"
       color="default"
-      buttonWidth="85%"
+      buttonWidth="80%"
       variant="contained"
       endIcon={{
         iconSize: 23,
@@ -298,7 +295,7 @@ const ButtonComponent = () => {
   return (
     <Card
       cardBorder={0}
-      cardWidth="90%"
+      cardWidth="80%"
       cardColor="#fff"
       cardHeight={200}
       cardTitle="Card Header"
@@ -375,7 +372,7 @@ const PickerComponent = () => {
   const pickerItems = ["Apple", "Orange"];
   return (
     <Picker
-      width="90%"
+      width="80%"
       bgColor="#fff"
       expanded={expanded}
       pickerItems={pickerItems}

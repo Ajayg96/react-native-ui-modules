@@ -37,7 +37,7 @@ const Accordion = (props) => {
 Accordion.propTypes = {
   bgColor: PropTypes.string,
   heading: PropTypes.string,
-  width: PropTypes.number.isRequired,
+  width: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   secondaryHeading: PropTypes.string,
   expanded: PropTypes.bool.isRequired,
