@@ -55,7 +55,7 @@ yarn add react-native-ui-modules
 
 <!-- ![image](https://drive.google.com/file/d/1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28/view?usp=sharing) -->
 
-![image](https://drive.google.com/uc?export=view&id=1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28)
+<img src="https://drive.google.com/uc?export=view&id=1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28" width="300" height="500">
 
 This component inherits all native TextInput props along with the following:-
 
@@ -360,9 +360,7 @@ const AccordionComponent = () => {
 | width           | String   |
 | pickerItems     | Array    |
 | selectedItem    | String   |
-| expanded        | Boolean  |
 | onValueChange   | Function |
-| onChange        | Function |
 | pickerItemStyle | Object   |
 | pickerTextStyle | Object   |
 
@@ -371,18 +369,15 @@ import React, { useState } from "react";
 import { Picker } from "react-native-ui-modules";
 
 const PickerComponent = () => {
-  const [expanded, setExpanded] = useState(fasle);
   const [selectedItem, setSelectedItem] = useState("");
-  const pickerItems = ["Apple", "Orange"];
+  const pickerItems = ["Javascript", "Typescript", "Python"];
   return (
     <Picker
       width="80%"
       bgColor="#fff"
-      expanded={expanded}
       pickerItems={pickerItems}
       selectedItem={selectedItem}
       onValueChange={(item) => setSelectedItem(item)}
-      onChange={() => setExpanded(!expanded)}
     />
   );
 };
