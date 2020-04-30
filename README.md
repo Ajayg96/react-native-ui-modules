@@ -22,6 +22,7 @@ Cross platform react native components
 
 - [Install](#install)
 - [Components](#components)
+- [Screenshots](#Screenshots)
 - [License](#license)
 
 ## Install
@@ -53,8 +54,6 @@ yarn add react-native-ui-modules
 - [Dialog](#dialog)
 
 ## Input
-
-<img src="https://drive.google.com/uc?export=view&id=1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28" width="300" height="500">
 
 This component inherits all native TextInput props along with the following:-
 
@@ -484,6 +483,11 @@ const DialogComponent = () => {
   );
 };
 ```
+
+## Screenshots
+
+[image](https://drive.google.com/uc?export=view&id=1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28)
+[image](https://drive.google.com/uc?export=view&id=1Kk8pVJkL-rHEzAAtZOHxk84tA0e_lDj-)
 
 ## License
 
