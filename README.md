@@ -55,7 +55,7 @@ yarn add react-native-ui-modules
 ## Input
 
 <p float="left">
-  <img alt="input" src="src/screenshots/input.jpg" width="400" height="500"/>
+  <img alt="input" src="src/screenshots/input.jpg" width="380" height="450"/>
 </p>
 
 This component inherits all native TextInput props along with the following:-
@@ -147,10 +147,8 @@ const IconComponent = () => {
 ## Spinner
 
 <p float="left">
-  <img alt="spinner" src="src/screenshots/spinner.jpg" width="400" height="500"/>
+  <img alt="spinner" src="src/screenshots/spinner.jpg" width="380" height="450"/>
 </p>
-
-<!-- <img src="https://drive.google.com/uc?export=view&id=19FY0ZyXgCACugXLV2dpnLzn3nyM6OyWg" width="300" height="500"> -->
 
 | Property        | Type                            |
 | --------------- | ------------------------------- |
@@ -198,10 +196,8 @@ const styles = StyleSheet.create({
 ## Snackbar
 
 <p float="left">
-  <img alt="snackbar" src="src/screenshots/snackbar.jpg" width="400" height="500"/>
+  <img alt="snackbar" src="src/screenshots/snackbar.jpg" width="380" height="450"/>
 </p>
-
-<!-- <img src="https://drive.google.com/uc?export=view&id=1OXnCd-PnwTx012ZdZx0DYOjppnKWA5PS" width="300" height="500"> -->
 
 | Property         | Type                           |
 | ---------------- | ------------------------------ |
@@ -255,10 +251,8 @@ const styles = StyleSheet.create({
 ## Button
 
 <p float="left">
-  <img alt="button" src="src/screenshots/button.jpg" width="400" height="500"/>
+  <img alt="button" src="src/screenshots/button.jpg" width="380" height="450"/>
 </p>
-
-<!-- <img src="https://drive.google.com/uc?export=view&id=14Om-fV25xgv1v-B1XIDvjEILntSGVt-_" width="300" height="500"> -->
 
 | Property    | Type                                             |
 | ----------- | ------------------------------------------------ |
@@ -300,13 +294,14 @@ const ButtonComponent = () => {
 ## Card
 
 <p float="left">
-  <img alt="card" src="src/screenshots/card.jpg" width="400" height="500"/>
+  <img alt="card" src="src/screenshots/card.jpg" width="380" height="450"/>
 </p>
 
 | Property        | Type     |
 | --------------- | -------- |
 | cardBorder      | Number   |
 | cardWidth       | String   |
+| cardTitle       | String   |
 | cardColor       | String   |
 | headerTextStyle | Object   |
 | headerStyle     | Object   |
@@ -323,12 +318,16 @@ const CardComponent = () => {
       cardBorder={0}
       cardWidth="80%"
       cardColor="#fff"
-      cardTitle="Card Header"
+      cardTitle="Heading"
       onPress={() => console.log("card pressed")}
       headerTextStyle={{ color: "blue" }}
       headerStyle={{ alignItems: "flex-start" }}
     >
-      <Text style={{ textAlign: "center" }}>Card Content</Text>
+      <Text style={{ textAlign: "center" }}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam.
+      </Text>
     </Card>
   );
 };
@@ -337,7 +336,7 @@ const CardComponent = () => {
 ## Accordion
 
 <p float="left">
-  <img alt="accordion" src="src/screenshots/accordion.jpg" width="400" height="500"/>
+  <img alt="accordion" src="src/screenshots/accordion.jpg" width="380" height="450"/>
 </p>
 
 | Property         | Type     |
@@ -380,7 +379,7 @@ const AccordionComponent = () => {
 ## Picker
 
 <p float="left">
-  <img alt="picker" src="src/screenshots/picker.jpg" width="400" height="500"/>
+  <img alt="picker" src="src/screenshots/picker.jpg" width="380" height="450"/>
 </p>
 
 | Property        | Type     |
@@ -399,7 +398,7 @@ import { Picker } from "react-native-ui-modules";
 
 const PickerComponent = () => {
   const [selectedItem, setSelectedItem] = useState("");
-  const pickerItems = ["Javascript", "Typescript", "Python"];
+  const pickerItems = ["Javascript", "Typescript", "Python", "NodeJS"];
   return (
     <Picker
       width="80%"
@@ -415,9 +414,9 @@ const PickerComponent = () => {
 ## Dialog
 
 <p float="left">
-  <img alt="bottomSheet" src="src/screenshots/bottom-sheet.jpg" width="400" height="500"/>
-  <img alt="dialog1" src="src/screenshots/dialog-1.jpg" width="400" height="500"/>
-  <img alt="dialog2" src="src/screenshots/dialog-2.jpg" width="400" height="500"/>
+  <img alt="bottomSheet" src="src/screenshots/bottom-sheet.jpg" width="380" height="450"/>
+  <img alt="dialog1" src="src/screenshots/dialog-1.jpg" width="380" height="450"/>
+  <img alt="dialog2" src="src/screenshots/dialog-2.jpg" width="380" height="450"/>
 </p>
 
 | Property         | Type                                   |
