@@ -55,7 +55,7 @@ yarn add react-native-ui-modules
 ## Input
 
 <p float="left">
-  <img alt="input" src="src/screenshots/input.jpg" width="300" height="300"/>
+  <img alt="input" src="src/screenshots/input.jpg" width="400" height="500"/>
 </p>
 
 This component inherits all native TextInput props along with the following:-
@@ -147,7 +147,7 @@ const IconComponent = () => {
 ## Spinner
 
 <p float="left">
-  <img alt="spinner" src="src/screenshots/spinner.jpg" width="300" height="300"/>
+  <img alt="spinner" src="src/screenshots/spinner.jpg" width="400" height="500"/>
 </p>
 
 <!-- <img src="https://drive.google.com/uc?export=view&id=19FY0ZyXgCACugXLV2dpnLzn3nyM6OyWg" width="300" height="500"> -->
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
 ## Snackbar
 
 <p float="left">
-  <img alt="snackbar" src="src/screenshots/snackbar.jpg" width="300" height="300"/>
+  <img alt="snackbar" src="src/screenshots/snackbar.jpg" width="400" height="500"/>
 </p>
 
 <!-- <img src="https://drive.google.com/uc?export=view&id=1OXnCd-PnwTx012ZdZx0DYOjppnKWA5PS" width="300" height="500"> -->
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
 ## Button
 
 <p float="left">
-  <img alt="button" src="src/screenshots/button.jpg" width="300" height="300"/>
+  <img alt="button" src="src/screenshots/button.jpg" width="400" height="500"/>
 </p>
 
 <!-- <img src="https://drive.google.com/uc?export=view&id=14Om-fV25xgv1v-B1XIDvjEILntSGVt-_" width="300" height="500"> -->
@@ -300,10 +300,8 @@ const ButtonComponent = () => {
 ## Card
 
 <p float="left">
-  <img alt="card" src="src/screenshots/card.jpg" width="300" height="300"/>
+  <img alt="card" src="src/screenshots/card.jpg" width="400" height="500"/>
 </p>
-
-<!-- <img src="https://drive.google.com/uc?export=view&id=1p0zuKcCjCORQ1v7gAdaBseY2Pvz1eWNh" width="300" height="500"> -->
 
 | Property        | Type     |
 | --------------- | -------- |
@@ -325,7 +323,6 @@ const CardComponent = () => {
       cardBorder={0}
       cardWidth="80%"
       cardColor="#fff"
-      cardHeight={200}
       cardTitle="Card Header"
       onPress={() => console.log("card pressed")}
       headerTextStyle={{ color: "blue" }}
@@ -340,10 +337,8 @@ const CardComponent = () => {
 ## Accordion
 
 <p float="left">
-  <img alt="accordion" src="src/screenshots/accordion.jpg" width="300" height="300"/>
+  <img alt="accordion" src="src/screenshots/accordion.jpg" width="400" height="500"/>
 </p>
-
-<!-- <img src="https://drive.google.com/uc?export=view&id=14IIo87yldY-PRQWN3PIHTpPrOPWMeung" width="300" height="500"> -->
 
 | Property         | Type     |
 | ---------------- | -------- |
@@ -385,10 +380,8 @@ const AccordionComponent = () => {
 ## Picker
 
 <p float="left">
-  <img alt="picker" src="src/screenshots/picker.jpg" width="300" height="300"/>
+  <img alt="picker" src="src/screenshots/picker.jpg" width="400" height="500"/>
 </p>
-
-<!-- <img src="https://drive.google.com/uc?export=view&id=1QtdTatWofzTPLfpaRsZVjJb33aRkoYC2" width="300" height="500"> -->
 
 | Property        | Type     |
 | --------------- | -------- |
@@ -422,12 +415,10 @@ const PickerComponent = () => {
 ## Dialog
 
 <p float="left">
-  <img alt="bottomSheet" src="src/screenshots/bottom-sheet.jpg" width="300" height="300"/>
-  <img alt="dialog1" src="src/screenshots/dialog-1.jpg" width="300" height="300"/>
-  <img alt="dialog2" src="src/screenshots/dialog-2.jpg" width="300" height="300"/>
+  <img alt="bottomSheet" src="src/screenshots/bottom-sheet.jpg" width="400" height="500"/>
+  <img alt="dialog1" src="src/screenshots/dialog-1.jpg" width="400" height="500"/>
+  <img alt="dialog2" src="src/screenshots/dialog-2.jpg" width="400" height="500"/>
 </p>
-
-<!-- ![image](https://drive.google.com/uc?export=view&id=1Kk8pVJkL-rHEzAAtZOHxk84tA0e_lDj-) -->
 
 | Property         | Type                                   |
 | ---------------- | -------------------------------------- |
@@ -440,6 +431,7 @@ const PickerComponent = () => {
 
 ```js
 import React, { useState } from "react";
+import { Button } from "react-native";
 import { Dialog } from "react-native-ui-modules";
 
 const DialogComponent = () => {
