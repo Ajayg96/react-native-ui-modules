@@ -6,7 +6,7 @@ Cross platform react native components
   <img src="https://badgen.net/badge/npm/>=5.6.0/blue">
   <img src="https://badgen.net/badge/react-native/>=0.60/orange">
   <img src="https://badgen.net/badge/code style/standard/yellow">
-  <img src="https://badgen.net/badge/release/v1.0.2/pink">
+  <img src="https://badgen.net/badge/release/v1.0.6/pink">
 </div>
 
 ## Getting Started
@@ -52,8 +52,6 @@ yarn add react-native-ui-modules
 - [Picker](#picker)
 
 ## Input
-
-<!-- ![image](https://drive.google.com/file/d/1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28/view?usp=sharing) -->
 
 <img src="https://drive.google.com/uc?export=view&id=1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28" width="300" height="500">
 
@@ -145,6 +143,8 @@ const IconComponent = () => {
 
 ## Spinner
 
+<img src="https://drive.google.com/uc?export=view&id=19FY0ZyXgCACugXLV2dpnLzn3nyM6OyWg" width="300" height="500">
+
 | Property        | Type                            |
 | --------------- | ------------------------------- |
 | visible         | Boolean                         |
@@ -189,6 +189,8 @@ const styles = StyleSheet.create({
 ```
 
 ## Snackbar
+
+<img src="https://drive.google.com/uc?export=view&id=1OXnCd-PnwTx012ZdZx0DYOjppnKWA5PS" width="300" height="500">
 
 | Property         | Type                           |
 | ---------------- | ------------------------------ |
@@ -241,6 +243,8 @@ const styles = StyleSheet.create({
 
 ## Button
 
+<img src="https://drive.google.com/uc?export=view&id=14Om-fV25xgv1v-B1XIDvjEILntSGVt-_" width="300" height="500">
+
 | Property    | Type                                             |
 | ----------- | ------------------------------------------------ |
 | title       | String                                           |
@@ -280,6 +284,8 @@ const ButtonComponent = () => {
 
 ## Card
 
+<img src="https://drive.google.com/uc?export=view&id=1p0zuKcCjCORQ1v7gAdaBseY2Pvz1eWNh" width="300" height="500">
+
 | Property        | Type     |
 | --------------- | -------- |
 | cardBorder      | Number   |
@@ -314,6 +320,8 @@ const ButtonComponent = () => {
 ```
 
 ## Accordion
+
+<img src="https://drive.google.com/uc?export=view&id=14IIo87yldY-PRQWN3PIHTpPrOPWMeung" width="300" height="500">
 
 | Property         | Type     |
 | ---------------- | -------- |
@@ -353,6 +361,8 @@ const AccordionComponent = () => {
 ```
 
 ## Picker
+
+<img src="https://drive.google.com/uc?export=view&id=1QtdTatWofzTPLfpaRsZVjJb33aRkoYC2" width="300" height="500">
 
 | Property        | Type     |
 | --------------- | -------- |

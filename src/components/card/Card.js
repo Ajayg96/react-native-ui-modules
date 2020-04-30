@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./styles/styles";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
 const Card = (props) => {
   return (
@@ -21,7 +21,6 @@ const Card = (props) => {
 Card.propTypes = {
   onPress: PropTypes.func,
   cardColor: PropTypes.string,
-  cardHeight: PropTypes.number,
   cardBorder: PropTypes.number,
   headerStyle: PropTypes.object,
   headerTextStyle: PropTypes.object,
