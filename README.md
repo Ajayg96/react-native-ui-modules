@@ -22,7 +22,6 @@ Cross platform react native components
 
 - [Install](#install)
 - [Components](#components)
-- [Screenshots](#Screenshots)
 - [License](#license)
 
 ## Install
@@ -54,6 +53,10 @@ yarn add react-native-ui-modules
 - [Dialog](#dialog)
 
 ## Input
+
+<p float="left">
+  <img alt="input" src="src/screenshots/input.jpg" width="300" height="300"/>
+</p>
 
 This component inherits all native TextInput props along with the following:-
 
@@ -143,7 +146,11 @@ const IconComponent = () => {
 
 ## Spinner
 
-<img src="https://drive.google.com/uc?export=view&id=19FY0ZyXgCACugXLV2dpnLzn3nyM6OyWg" width="300" height="500">
+<p float="left">
+  <img alt="spinner" src="src/screenshots/spinner.jpg" width="300" height="300"/>
+</p>
+
+<!-- <img src="https://drive.google.com/uc?export=view&id=19FY0ZyXgCACugXLV2dpnLzn3nyM6OyWg" width="300" height="500"> -->
 
 | Property        | Type                            |
 | --------------- | ------------------------------- |
@@ -190,7 +197,11 @@ const styles = StyleSheet.create({
 
 ## Snackbar
 
-<img src="https://drive.google.com/uc?export=view&id=1OXnCd-PnwTx012ZdZx0DYOjppnKWA5PS" width="300" height="500">
+<p float="left">
+  <img alt="snackbar" src="src/screenshots/snackbar.jpg" width="300" height="300"/>
+</p>
+
+<!-- <img src="https://drive.google.com/uc?export=view&id=1OXnCd-PnwTx012ZdZx0DYOjppnKWA5PS" width="300" height="500"> -->
 
 | Property         | Type                           |
 | ---------------- | ------------------------------ |
@@ -243,7 +254,11 @@ const styles = StyleSheet.create({
 
 ## Button
 
-<img src="https://drive.google.com/uc?export=view&id=14Om-fV25xgv1v-B1XIDvjEILntSGVt-_" width="300" height="500">
+<p float="left">
+  <img alt="button" src="src/screenshots/button.jpg" width="300" height="300"/>
+</p>
+
+<!-- <img src="https://drive.google.com/uc?export=view&id=14Om-fV25xgv1v-B1XIDvjEILntSGVt-_" width="300" height="500"> -->
 
 | Property    | Type                                             |
 | ----------- | ------------------------------------------------ |
@@ -284,14 +299,17 @@ const ButtonComponent = () => {
 
 ## Card
 
-<img src="https://drive.google.com/uc?export=view&id=1p0zuKcCjCORQ1v7gAdaBseY2Pvz1eWNh" width="300" height="500">
+<p float="left">
+  <img alt="card" src="src/screenshots/card.jpg" width="300" height="300"/>
+</p>
+
+<!-- <img src="https://drive.google.com/uc?export=view&id=1p0zuKcCjCORQ1v7gAdaBseY2Pvz1eWNh" width="300" height="500"> -->
 
 | Property        | Type     |
 | --------------- | -------- |
 | cardBorder      | Number   |
 | cardWidth       | String   |
 | cardColor       | String   |
-| cardHeight      | Number   |
 | headerTextStyle | Object   |
 | headerStyle     | Object   |
 | onPress         | Function |
@@ -301,7 +319,7 @@ import React from "react";
 import { Text } from "react-native";
 import { Card } from "react-native-ui-modules";
 
-const ButtonComponent = () => {
+const CardComponent = () => {
   return (
     <Card
       cardBorder={0}
@@ -321,7 +339,11 @@ const ButtonComponent = () => {
 
 ## Accordion
 
-<img src="https://drive.google.com/uc?export=view&id=14IIo87yldY-PRQWN3PIHTpPrOPWMeung" width="300" height="500">
+<p float="left">
+  <img alt="accordion" src="src/screenshots/accordion.jpg" width="300" height="300"/>
+</p>
+
+<!-- <img src="https://drive.google.com/uc?export=view&id=14IIo87yldY-PRQWN3PIHTpPrOPWMeung" width="300" height="500"> -->
 
 | Property         | Type     |
 | ---------------- | -------- |
@@ -362,7 +384,11 @@ const AccordionComponent = () => {
 
 ## Picker
 
-<img src="https://drive.google.com/uc?export=view&id=1QtdTatWofzTPLfpaRsZVjJb33aRkoYC2" width="300" height="500">
+<p float="left">
+  <img alt="picker" src="src/screenshots/picker.jpg" width="300" height="300"/>
+</p>
+
+<!-- <img src="https://drive.google.com/uc?export=view&id=1QtdTatWofzTPLfpaRsZVjJb33aRkoYC2" width="300" height="500"> -->
 
 | Property        | Type     |
 | --------------- | -------- |
@@ -395,13 +421,13 @@ const PickerComponent = () => {
 
 ## Dialog
 
-<!-- ![image](https://drive.google.com/uc?export=view&id=1Kk8pVJkL-rHEzAAtZOHxk84tA0e_lDj-) -->
-
 <p float="left">
-<img src="https://drive.google.com/uc?export=view&id=1Kk8pVJkL-rHEzAAtZOHxk84tA0e_lDj-" width="300" height="500">
-<img src="https://drive.google.com/uc?export=view&id=1dRiretauABe5Sb22p2tnewNWAWwupEkw" width="300" height="500">
-<img src="https://drive.google.com/uc?export=view&id=1EalPrTduTtt1rYCF-RSRNLNecjlTHYWD" width="300" height="500">
+  <img alt="bottomSheet" src="src/screenshots/bottom-sheet.jpg" width="300" height="300"/>
+  <img alt="dialog1" src="src/screenshots/dialog-1.jpg" width="300" height="300"/>
+  <img alt="dialog2" src="src/screenshots/dialog-2.jpg" width="300" height="300"/>
 </p>
+
+<!-- ![image](https://drive.google.com/uc?export=view&id=1Kk8pVJkL-rHEzAAtZOHxk84tA0e_lDj-) -->
 
 | Property         | Type                                   |
 | ---------------- | -------------------------------------- |
@@ -483,11 +509,6 @@ const DialogComponent = () => {
   );
 };
 ```
-
-## Screenshots
-
-![image](https://drive.google.com/uc?export=view&id=1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28)
-![image](https://drive.google.com/uc?export=view&id=1Kk8pVJkL-rHEzAAtZOHxk84tA0e_lDj-)
 
 ## License
 
