@@ -1,6 +1,6 @@
 {
   "name": "react-native-ui-modules",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Cross platform react native components",
   "main": "index.js",
   "scripts": {

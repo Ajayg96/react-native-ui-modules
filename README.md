@@ -6,7 +6,7 @@ Cross platform react native components
   <img src="https://badgen.net/badge/npm/>=5.6.0/blue">
   <img src="https://badgen.net/badge/react-native/>=0.60/orange">
   <img src="https://badgen.net/badge/code style/standard/yellow">
-  <img src="https://badgen.net/badge/release/v1.0.6/pink">
+  <img src="https://badgen.net/badge/release/v1.0.8/pink">
 </div>
 
 ## Getting Started
@@ -54,9 +54,9 @@ yarn add react-native-ui-modules
 
 ## Input
 
-<p float="left">
+<!-- <p float="left">
   <img alt="input" src="src/screenshots/input.jpg" width="380" height="450"/>
-</p>
+</p> -->
 
 This component inherits all native TextInput props along with the following:-
 
@@ -146,9 +146,9 @@ const IconComponent = () => {
 
 ## Spinner
 
-<p float="left">
+<!-- <p float="left">
   <img alt="spinner" src="src/screenshots/spinner.jpg" width="380" height="450"/>
-</p>
+</p> -->
 
 | Property        | Type                            |
 | --------------- | ------------------------------- |
@@ -195,9 +195,9 @@ const styles = StyleSheet.create({
 
 ## Snackbar
 
-<p float="left">
+<!-- <p float="left">
   <img alt="snackbar" src="src/screenshots/snackbar.jpg" width="380" height="450"/>
-</p>
+</p> -->
 
 | Property         | Type                           |
 | ---------------- | ------------------------------ |
@@ -250,9 +250,9 @@ const styles = StyleSheet.create({
 
 ## Button
 
-<p float="left">
+<!-- <p float="left">
   <img alt="button" src="src/screenshots/button.jpg" width="380" height="450"/>
-</p>
+</p> -->
 
 | Property    | Type                                             |
 | ----------- | ------------------------------------------------ |
@@ -293,9 +293,9 @@ const ButtonComponent = () => {
 
 ## Card
 
-<p float="left">
+<!-- <p float="left">
   <img alt="card" src="src/screenshots/card.jpg" width="380" height="450"/>
-</p>
+</p> -->
 
 | Property        | Type     |
 | --------------- | -------- |
@@ -335,9 +335,9 @@ const CardComponent = () => {
 
 ## Accordion
 
-<p float="left">
+<!-- <p float="left">
   <img alt="accordion" src="src/screenshots/accordion.jpg" width="380" height="450"/>
-</p>
+</p> -->
 
 | Property         | Type     |
 | ---------------- | -------- |
@@ -378,9 +378,9 @@ const AccordionComponent = () => {
 
 ## Picker
 
-<p float="left">
+<!-- <p float="left">
   <img alt="picker" src="src/screenshots/picker.jpg" width="380" height="450"/>
-</p>
+</p> -->
 
 | Property        | Type     |
 | --------------- | -------- |
@@ -413,11 +413,11 @@ const PickerComponent = () => {
 
 ## Dialog
 
-<p float="left">
+<!-- <p float="left">
   <img alt="bottomSheet" src="src/screenshots/bottom-sheet.jpg" width="380" height="450"/>
   <img alt="dialog1" src="src/screenshots/dialog-1.jpg" width="380" height="450"/>
   <img alt="dialog2" src="src/screenshots/dialog-2.jpg" width="380" height="450"/>
-</p>
+</p> -->
 
 | Property         | Type                                   |
 | ---------------- | -------------------------------------- |
