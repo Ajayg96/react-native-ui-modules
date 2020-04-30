@@ -55,7 +55,7 @@ yarn add react-native-ui-modules
 ## Input
 
 <p float="left">
-  <img alt="input" src="src/screenshots/input.jpg" width="300" height="300" style="object-fit:cover;"/>
+  <img alt="input" src="src/screenshots/input.jpg" width="380" height="450"/>
 </p>
 
 This component inherits all native TextInput props along with the following:-
