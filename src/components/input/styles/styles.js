@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 
 const input = (props) => ({
   marginTop: 15,
@@ -8,12 +8,15 @@ const input = (props) => ({
   alignSelf: "center",
   height: props.inputHeight,
   width: props.inputWidth,
+  paddingTop: Platform.OS === "ios" ? 10 : 0,
+  paddingBottom: Platform.OS === "ios" ? 10 : 0,
 });
 
 const styles = (props) =>
   StyleSheet.create({
     input: {
       fontSize: 16,
+      marginLeft: Platform.OS === "ios" ? 2 : 0,
     },
     outlined: {
       ...input(props),
@@ -27,8 +30,8 @@ const styles = (props) =>
       borderBottomColor: props.borderBottomColor,
     },
     inputIcon: {
-      marginLeft: 5,
       marginRight: 5,
+      marginLeft: 5,
     },
     icon: {
       width: "10%",

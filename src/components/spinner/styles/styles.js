@@ -14,7 +14,8 @@ const styles = (props) =>
       borderRadius: 100,
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: props.backgroundColor,
+      backgroundColor:
+        Platform.OS === "android" ? props.backgroundColor : "transparent",
     },
   });
 

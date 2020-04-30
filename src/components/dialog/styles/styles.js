@@ -30,7 +30,7 @@ const styles = (props) =>
       backgroundColor: props.dialogContainer.dialogStyle.dialogBackgroundColor,
     },
     headerContainer: {
-      ...shadow,
+      // ...shadow,
       padding: 10,
       width: "100%",
       flexDirection: "row",

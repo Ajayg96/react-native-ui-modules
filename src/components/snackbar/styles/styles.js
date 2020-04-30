@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 
 const styles = (props) =>
   StyleSheet.create({
@@ -15,7 +15,7 @@ const styles = (props) =>
       backgroundColor: props.backgroundColor,
     },
     positionTop: {
-      top: 20,
+      top: Platform.OS === "android" ? 20 : 40,
     },
     widthBig: { width: "80%" },
     messageText: { color: props.messageTextColor },

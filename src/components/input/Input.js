@@ -11,7 +11,9 @@ const Input = (props) => {
     ? (inputWidth = "80%")
     : props.startIcon
     ? (inputWidth = "90%")
-    : props.type === "password" && (inputWidth = "90%");
+    : props.type === "password"
+    ? (inputWidth = "90%")
+    : (inputWidth = "100%");
   return (
     <View
       style={

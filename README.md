@@ -54,10 +54,6 @@ yarn add react-native-ui-modules
 
 ## Input
 
-<!-- <p float="left">
-  <img alt="input" src="src/screenshots/input.jpg" width="380" height="450"/>
-</p> -->
-
 This component inherits all native TextInput props along with the following:-
 
 | Property          | Type                                  |
@@ -146,15 +142,11 @@ const IconComponent = () => {
 
 ## Spinner
 
-<!-- <p float="left">
-  <img alt="spinner" src="src/screenshots/spinner.jpg" width="380" height="450"/>
-</p> -->
-
 | Property        | Type                            |
 | --------------- | ------------------------------- |
 | visible         | Boolean                         |
 | size            | String(enum - "small", "large") |
-| backgroundColor | String                          |
+| backgroundColor | String (android only)           |
 | onClose         | Function                        |
 | color           | String                          |
 
@@ -194,10 +186,6 @@ const styles = StyleSheet.create({
 ```
 
 ## Snackbar
-
-<!-- <p float="left">
-  <img alt="snackbar" src="src/screenshots/snackbar.jpg" width="380" height="450"/>
-</p> -->
 
 | Property         | Type                           |
 | ---------------- | ------------------------------ |
@@ -250,10 +238,6 @@ const styles = StyleSheet.create({
 
 ## Button
 
-<!-- <p float="left">
-  <img alt="button" src="src/screenshots/button.jpg" width="380" height="450"/>
-</p> -->
-
 | Property    | Type                                             |
 | ----------- | ------------------------------------------------ |
 | title       | String                                           |
@@ -293,10 +277,6 @@ const ButtonComponent = () => {
 
 ## Card
 
-<!-- <p float="left">
-  <img alt="card" src="src/screenshots/card.jpg" width="380" height="450"/>
-</p> -->
-
 | Property        | Type     |
 | --------------- | -------- |
 | cardBorder      | Number   |
@@ -320,10 +300,10 @@ const CardComponent = () => {
       cardColor="#fff"
       cardTitle="Heading"
       onPress={() => console.log("card pressed")}
-      headerTextStyle={{ color: "blue" }}
-      headerStyle={{ alignItems: "flex-start" }}
+      headerTextStyle={{ color: "black", fontWeight: "bold" }}
+      headerStyle={{ alignItems: "flex-start", paddingBottom: 7 }}
     >
-      <Text style={{ textAlign: "center" }}>
+      <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam.
@@ -334,10 +314,6 @@ const CardComponent = () => {
 ```
 
 ## Accordion
-
-<!-- <p float="left">
-  <img alt="accordion" src="src/screenshots/accordion.jpg" width="380" height="450"/>
-</p> -->
 
 | Property         | Type     |
 | ---------------- | -------- |
@@ -378,10 +354,6 @@ const AccordionComponent = () => {
 
 ## Picker
 
-<!-- <p float="left">
-  <img alt="picker" src="src/screenshots/picker.jpg" width="380" height="450"/>
-</p> -->
-
 | Property        | Type     |
 | --------------- | -------- |
 | bgColor         | Number   |
@@ -412,12 +384,6 @@ const PickerComponent = () => {
 ```
 
 ## Dialog
-
-<!-- <p float="left">
-  <img alt="bottomSheet" src="src/screenshots/bottom-sheet.jpg" width="380" height="450"/>
-  <img alt="dialog1" src="src/screenshots/dialog-1.jpg" width="380" height="450"/>
-  <img alt="dialog2" src="src/screenshots/dialog-2.jpg" width="380" height="450"/>
-</p> -->
 
 | Property         | Type                                   |
 | ---------------- | -------------------------------------- |
