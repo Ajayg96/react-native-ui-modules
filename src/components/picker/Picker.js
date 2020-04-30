@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Icon from "../icon/Icon";
 import PropTypes from "prop-types";
-import { shadow } from "../../static/constants";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import styles from "./styles/styles";
+import { View, Text, TouchableOpacity } from "react-native";
 
 const Picker = (props) => {
+  const [expanded, onChange] = useState(false);
   return (
     <TouchableOpacity
       activeOpacity={1}
-      onPress={() => props.onChange()}
       style={styles(props).picker}
+      onPress={() => onChange(!expanded)}
     >
       <View style={styles(props).rowContainer}>
         <Text style={props.pickerTextStyle}>
@@ -23,13 +24,13 @@ const Picker = (props) => {
           name="arrow-drop-down"
         />
       </View>
-      {props.expanded &&
+      {expanded &&
         props.pickerItems.map((item, index) => (
           <TouchableOpacity
             key={index}
             activeOpacity={1}
             onPress={() => {
-              props.onChange();
+              onChange(!expanded);
               props.onValueChange(item);
             }}
             style={styles(props).pickerItemContainer}
@@ -47,34 +48,8 @@ Picker.propTypes = {
   pickerTextStyle: PropTypes.object,
   pickerItemStyle: PropTypes.object,
   width: PropTypes.string.isRequired,
-  expanded: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
   pickerItems: PropTypes.array.isRequired,
   onValueChange: PropTypes.func.isRequired,
 };
-
-const styles = (props) =>
-  StyleSheet.create({
-    rowContainer: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "space-between",
-    },
-    picker: {
-      ...shadow,
-      padding: 10,
-      marginTop: 15,
-      marginBottom: 15,
-      alignSelf: "center",
-      width: props.width,
-      flexDirection: "column",
-      justifyContent: "flex-start",
-      backgroundColor: props.bgColor,
-    },
-    pickerItemContainer: {
-      paddingTop: 10,
-      justifyContent: "flex-start",
-    },
-  });
 
 export default Picker;

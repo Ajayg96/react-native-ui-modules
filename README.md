@@ -53,6 +53,10 @@ yarn add react-native-ui-modules
 
 ## Input
 
+<!-- ![image](https://drive.google.com/file/d/1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28/view?usp=sharing) -->
+
+![image](https://drive.google.com/uc?export=view&id=1vLpnRJr9B2RqIBh9XoRnO8Yt6LsAFA28)
+
 This component inherits all native TextInput props along with the following:-
 
 | Property          | Type                                  |

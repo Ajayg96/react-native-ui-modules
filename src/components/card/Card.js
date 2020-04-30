@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { shadow } from "../../static/constants";
-import { View, Text, StyleSheet } from "react-native";
+import styles from "./styles/styles";
+import { View, Text } from "react-native";
 
 const Card = (props) => {
   return (
@@ -28,20 +28,5 @@ Card.propTypes = {
   children: PropTypes.element.isRequired,
   cardWidth: PropTypes.string.isRequired,
 };
-
-const styles = (props) =>
-  StyleSheet.create({
-    card: {
-      ...shadow,
-      padding: 10,
-      alignSelf: "center",
-      width: props.cardWidth,
-      height: props.cardHeight,
-      flexDirection: "column",
-      justifyContent: "space-between",
-      borderRadius: props.cardBorder,
-      backgroundColor: props.cardColor,
-    },
-  });
 
 export default Card;

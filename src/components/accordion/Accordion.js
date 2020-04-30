@@ -1,8 +1,8 @@
 import React from "react";
 import Icon from "../icon/Icon";
 import PropTypes from "prop-types";
-import { shadow } from "../../static/constants";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import styles from "./styles/styles";
+import { View, Text, TouchableOpacity } from "react-native";
 
 const Accordion = (props) => {
   return (
@@ -45,29 +45,5 @@ Accordion.propTypes = {
   headingStyle: PropTypes.object,
   secondaryStyle: PropTypes.object,
 };
-
-const styles = (props) =>
-  StyleSheet.create({
-    rowContainer: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "space-between",
-    },
-    accordion: {
-      ...shadow,
-      padding: 10,
-      marginTop: 15,
-      marginBottom: 15,
-      alignSelf: "center",
-      width: props.width,
-      flexDirection: "column",
-      justifyContent: "flex-start",
-      backgroundColor: props.bgColor,
-    },
-    expansionSummary: {
-      paddingTop: 10,
-      justifyContent: "flex-start",
-    },
-  });
 
 export default Accordion;
