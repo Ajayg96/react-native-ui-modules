@@ -50,6 +50,7 @@ yarn add react-native-ui-modules
 - [Card](#card)
 - [Accordion](#accordion)
 - [Picker](#picker)
+- [Dialog](#dialog)
 
 ## Input
 
@@ -389,6 +390,97 @@ const PickerComponent = () => {
       selectedItem={selectedItem}
       onValueChange={(item) => setSelectedItem(item)}
     />
+  );
+};
+```
+
+## Dialog
+
+<!-- ![image](https://drive.google.com/uc?export=view&id=1Kk8pVJkL-rHEzAAtZOHxk84tA0e_lDj-) -->
+
+<p float="left">
+<img src="https://drive.google.com/uc?export=view&id=1Kk8pVJkL-rHEzAAtZOHxk84tA0e_lDj-" width="300" height="500">
+<img src="https://drive.google.com/uc?export=view&id=1dRiretauABe5Sb22p2tnewNWAWwupEkw" width="300" height="500">
+<img src="https://drive.google.com/uc?export=view&id=1EalPrTduTtt1rYCF-RSRNLNecjlTHYWD" width="300" height="500">
+</p>
+
+| Property         | Type                                   |
+| ---------------- | -------------------------------------- |
+| type             | String(enum - "bottomSheet", "dialog") |
+| visible          | Boolean                                |
+| cancelable       | Function                               |
+| onClose          | Function                               |
+| dialogContainer  | Object                                 |
+| buttonTitleStyle | Object                                 |
+
+```js
+import React, { useState } from "react";
+import { Dialog } from "react-native-ui-modules";
+
+const DialogComponent = () => {
+  const [showDialog, setDialog] = useState(false);
+  return (
+    <>
+      <Button title="Show Dialog" onPress={() => setDialog(!showDialog)} />
+      <Dialog
+        type="bottomSheet"
+        dialogContainer={{
+          dialogStyle: {
+            dialogWidth: "85%",
+            dialogBackgroundColor: "#fff",
+          },
+          dialogHeaderStyle: {
+            iconColor: "#343434",
+            headerBgColor: "#fff",
+            dialogTitleColor: "#000",
+            alignDialogTitle: "center",
+          },
+          dialogHeaderComponent: {
+            renderHeader: true,
+            dialogTitle: "Heading",
+            renderCloseIcon: true,
+          },
+          dialogFooterStyle: {
+            buttonDirection: "column",
+            alignFooterButton: "center",
+            primaryButtonColor: "teal",
+            secondaryButtonColor: "gray",
+            primaryButtonWidth: "25%",
+            secondaryButtonWidth: "25%",
+            primaryButtonRadius: 1,
+            secondaryButtonRadius: 1,
+          },
+          dialogFooterComponent: {
+            renderFooterButton: true,
+            renderButtonGroup: true,
+            renderSingleButton: false,
+            secondaryButtonTitle: "Discard",
+            primaryButtonTitle: "Save",
+            primaryButtonPress: () => {
+              setDialog(!showDialog);
+            },
+            secondaryButtonPress: () => {
+              setDialog(!showDialog);
+            },
+          },
+        }}
+        buttonTitleStyle={{
+          fontWeight: "500",
+          color: "#fff",
+        }}
+        cancelable={() => {}}
+        visible={showDialog}
+        onClose={() => setDialog(!showDialog)}
+      >
+        <View>
+          <Text style={{ color: "#000" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </Text>
+        </View>
+      </Dialog>
+    </>
   );
 };
 ```

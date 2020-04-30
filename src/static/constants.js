@@ -23,7 +23,7 @@ export const shadow = {
 export const ThemeColor = {
   default: "grey",
   primary: "#1976d2",
-  transparent: "#00000080",
+  transparentColor: "#00000080",
   secondary: "rgb(220, 0, 78)",
 };
 
