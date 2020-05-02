@@ -1,5 +1,8 @@
 <h1 style="text-align: center">React Native Components</h1>
-Cross platform react native components
+
+### Docs
+
+Cross platform react native components [https://zealous-snyder-a3ec60.netlify.app/]
 
 <div style="text-align: center">
   <img src="https://badgen.net/badge/node@LTS/>=12.11.1/green">
@@ -72,7 +75,7 @@ This component inherits all native TextInput props along with the following:-
 | passwordHidden    | Boolean                               |
 | togglePassword    | Function                              |
 
-```js
+<!-- ```js
 import React, { useState } from "react";
 import { Input } from "react-native-ui-modules";
 
@@ -118,7 +121,7 @@ const InputComponent = () => {
     </>
   );
 };
-```
+``` -->
 
 ## Icon
 
@@ -131,14 +134,14 @@ This component inherits react-native-vector-icons property:
 | type     | String(enum - "materialIcon", "antDesign", "materialCommunityIcon", "entypo", "zocial", "feather", "ionIcons", "octIcons", "evilIcons", "foundation", "fontAwesome", "fontAwesome5", "simpleLineIcons"), |
 | color    | String                                                                                                                                                                                                   |
 
-```js
+<!-- ```js
 import React from "react";
 import { Icon } from "react-native-ui-modules";
 
 const IconComponent = () => {
   return <Icon size={24} name="home" color="#343434" type="materialIcon" />;
 };
-```
+``` -->
 
 ## Spinner
 
@@ -150,7 +153,7 @@ const IconComponent = () => {
 | onClose         | Function                        |
 | color           | String                          |
 
-```js
+<!-- ```js
 import React, { useState } from "react";
 import { Spinner } from "react-native-ui-modules";
 import { View, Button, StyleSheet } from "react-native";
@@ -183,7 +186,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFF",
   },
 });
-```
+``` -->
 
 ## Snackbar
 
@@ -198,7 +201,7 @@ const styles = StyleSheet.create({
 | backgroundColor  | String                         |
 | handleAction     | Function                       |
 
-```js
+<!-- ```js
 import React, { useState } from "react";
 import { Snackbar } from "react-native-ui-modules";
 import { View, Button, StyleSheet } from "react-native";
@@ -234,7 +237,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFF",
   },
 });
-```
+``` -->
 
 ## Button
 
@@ -251,7 +254,7 @@ const styles = StyleSheet.create({
 | buttonStyle | Object                                           |
 | onPress     | Function                                         |
 
-```js
+<!-- ```js
 import React from "react";
 import { Button } from "react-native-ui-modules";
 
@@ -273,7 +276,7 @@ const ButtonComponent = () => {
     />
   );
 };
-```
+``` -->
 
 ## Card
 
@@ -287,7 +290,7 @@ const ButtonComponent = () => {
 | headerStyle     | Object   |
 | onPress         | Function |
 
-```js
+<!-- ```js
 import React from "react";
 import { Text } from "react-native";
 import { Card } from "react-native-ui-modules";
@@ -311,7 +314,7 @@ const CardComponent = () => {
     </Card>
   );
 };
-```
+``` -->
 
 ## Accordion
 
@@ -326,7 +329,7 @@ const CardComponent = () => {
 | headingStyle     | Object   |
 | onChange         | Function |
 
-```js
+<!-- ```js
 import React, { useState } from "react";
 import { Text } from "react-native";
 import { Accordion } from "react-native-ui-modules";
@@ -350,7 +353,7 @@ const AccordionComponent = () => {
     </Accordion>
   );
 };
-```
+``` -->
 
 ## Picker
 
@@ -364,7 +367,7 @@ const AccordionComponent = () => {
 | pickerItemStyle | Object   |
 | pickerTextStyle | Object   |
 
-```js
+<!-- ```js
 import React, { useState } from "react";
 import { Picker } from "react-native-ui-modules";
 
@@ -381,7 +384,7 @@ const PickerComponent = () => {
     />
   );
 };
-```
+``` -->
 
 ## Dialog
 
@@ -394,7 +397,7 @@ const PickerComponent = () => {
 | dialogContainer  | Object                                 |
 | buttonTitleStyle | Object                                 |
 
-```js
+<!-- ```js
 import React, { useState } from "react";
 import { Button } from "react-native";
 import { Dialog } from "react-native-ui-modules";
@@ -465,7 +468,7 @@ const DialogComponent = () => {
     </>
   );
 };
-```
+``` -->
 
 ## License
 
