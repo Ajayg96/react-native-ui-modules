@@ -1,15 +1,14 @@
 <h1 style="text-align: center">React Native Components</h1>
 
-### Docs
-
-Cross platform react native components [https://zealous-snyder-a3ec60.netlify.app/]
+Cross platform react native components https://zealous-snyder-a3ec60.netlify.app/
 
 <div style="text-align: center">
   <img src="https://badgen.net/badge/node@LTS/>=12.11.1/green">
-  <img src="https://badgen.net/badge/npm/>=5.6.0/blue">
   <img src="https://badgen.net/badge/react-native/>=0.60/orange">
+  <img src="https://badgen.net/badge/npm/>=5.6.0/red">
+  <img src="https://badgen.net/badge/yarn/>=1.2.0/blue">
   <img src="https://badgen.net/badge/code style/standard/yellow">
-  <img src="https://badgen.net/badge/release/v1.0.8/pink">
+  <img src="https://badgen.net/badge/release/v1.0.9/pink">
 </div>
 
 ## Getting Started
