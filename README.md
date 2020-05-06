@@ -8,7 +8,7 @@ Cross platform react native components https://zealous-snyder-a3ec60.netlify.app
   <img src="https://badgen.net/badge/npm/>=5.6.0/red">
   <img src="https://badgen.net/badge/yarn/>=1.2.0/blue">
   <img src="https://badgen.net/badge/code style/standard/yellow">
-  <img src="https://badgen.net/badge/release/v1.0.9/pink">
+  <img src="https://badgen.net/badge/release/v1.0.10/pink">
 </div>
 
 ## Getting Started
@@ -74,54 +74,6 @@ This component inherits all native TextInput props along with the following:-
 | passwordHidden    | Boolean                               |
 | togglePassword    | Function                              |
 
-<!-- ```js
-import React, { useState } from "react";
-import { Input } from "react-native-ui-modules";
-
-const InputComponent = () => {
-  const [passwordHidden, setPasswordHidden] = useState(true);
-  return (
-    <>
-      <Input
-        inputWidth="80%"
-        variant="standard"
-        startIcon={true}
-        icon={{
-          iconSize: 23,
-          iconName: "person",
-          iconColor: "black",
-          iconType: "materialIcon",
-        }}
-        placeholder="Username"
-      />
-
-      <Input
-        inputWidth="80%"
-        startIcon={true}
-        variant="standard"
-        type="password"
-        passwordHidden={passwordHidden}
-        togglePassword={() => setPasswordHidden(!passwordHidden)}
-        icon={{
-          iconSize: 23,
-          iconName: "lock",
-          iconColor: "gray",
-          iconType: "materialIcon",
-        }}
-        endIcon={{
-          iconSize: 23,
-          iconColor: "gray",
-          iconType: "materialIcon",
-          passwordOnIcon: "visibility",
-          passwordOffIcon: "visibility-off",
-        }}
-        placeholder="Password"
-      />
-    </>
-  );
-};
-``` -->
-
 ## Icon
 
 This component inherits react-native-vector-icons property:
@@ -133,15 +85,6 @@ This component inherits react-native-vector-icons property:
 | type     | String(enum - "materialIcon", "antDesign", "materialCommunityIcon", "entypo", "zocial", "feather", "ionIcons", "octIcons", "evilIcons", "foundation", "fontAwesome", "fontAwesome5", "simpleLineIcons"), |
 | color    | String                                                                                                                                                                                                   |
 
-<!-- ```js
-import React from "react";
-import { Icon } from "react-native-ui-modules";
-
-const IconComponent = () => {
-  return <Icon size={24} name="home" color="#343434" type="materialIcon" />;
-};
-``` -->
-
 ## Spinner
 
 | Property        | Type                            |
@@ -151,41 +94,6 @@ const IconComponent = () => {
 | backgroundColor | String (android only)           |
 | onClose         | Function                        |
 | color           | String                          |
-
-<!-- ```js
-import React, { useState } from "react";
-import { Spinner } from "react-native-ui-modules";
-import { View, Button, StyleSheet } from "react-native";
-
-const SpinnerComponent = () => {
-  const [visible, setSpinner] = useState(false);
-  const toggleSpinner = () => {
-    setSpinner(!visible);
-  };
-
-  return (
-    <View style={styles.container}>
-      <Button title="Show spinner" onPress={toggleSpinner} />
-      <Spinner
-        color="red"
-        size="small"
-        backgroundColor="#FFF"
-        visible={visible}
-        onClose={toggleSpinner}
-      />
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FFF",
-  },
-});
-``` -->
 
 ## Snackbar
 
@@ -199,44 +107,6 @@ const styles = StyleSheet.create({
 | actionTextColor  | String                         |
 | backgroundColor  | String                         |
 | handleAction     | Function                       |
-
-<!-- ```js
-import React, { useState } from "react";
-import { Snackbar } from "react-native-ui-modules";
-import { View, Button, StyleSheet } from "react-native";
-
-const SnackbarComponent = () => {
-  const [visible, setSnackbar] = useState(false);
-  const toggleSnackbar = () => {
-    setSnackbar(!visible);
-  };
-
-  return (
-    <View style={styles.container}>
-      <Button title="Show snackbar" onPress={toggleSnackbar} />
-      <Snackbar
-        position="top"
-        actionText="Close"
-        message="Snackbar message"
-        visible={visible}
-        backgroundColor="#000000"
-        messageTextColor="#FFFFFF"
-        actionTextColor="#AB2611"
-        handleAction={toggleSnackbar}
-      />
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FFF",
-  },
-});
-``` -->
 
 ## Button
 
@@ -253,30 +123,6 @@ const styles = StyleSheet.create({
 | buttonStyle | Object                                           |
 | onPress     | Function                                         |
 
-<!-- ```js
-import React from "react";
-import { Button } from "react-native-ui-modules";
-
-const ButtonComponent = () => {
-  return (
-    <Button
-      title="Continue"
-      color="default"
-      buttonWidth="80%"
-      variant="contained"
-      endIcon={{
-        iconSize: 23,
-        iconName: "chevron-right",
-        iconColor: "white",
-        iconType: "materialIcon",
-      }}
-      titleColor="white"
-      onPress={() => console.log("buttonPress")}
-    />
-  );
-};
-``` -->
-
 ## Card
 
 | Property        | Type     |
@@ -288,32 +134,6 @@ const ButtonComponent = () => {
 | headerTextStyle | Object   |
 | headerStyle     | Object   |
 | onPress         | Function |
-
-<!-- ```js
-import React from "react";
-import { Text } from "react-native";
-import { Card } from "react-native-ui-modules";
-
-const CardComponent = () => {
-  return (
-    <Card
-      cardBorder={0}
-      cardWidth="80%"
-      cardColor="#fff"
-      cardTitle="Heading"
-      onPress={() => console.log("card pressed")}
-      headerTextStyle={{ color: "black", fontWeight: "bold" }}
-      headerStyle={{ alignItems: "flex-start", paddingBottom: 7 }}
-    >
-      <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam.
-      </Text>
-    </Card>
-  );
-};
-``` -->
 
 ## Accordion
 
@@ -328,32 +148,6 @@ const CardComponent = () => {
 | headingStyle     | Object   |
 | onChange         | Function |
 
-<!-- ```js
-import React, { useState } from "react";
-import { Text } from "react-native";
-import { Accordion } from "react-native-ui-modules";
-
-const AccordionComponent = () => {
-  const [expanded, setExpanded] = useState(fasle);
-  return (
-    <Accordion
-      width="80%"
-      bgColor="#fff"
-      heading="Heading"
-      expanded={expanded}
-      secondaryHeading="Secondary heading"
-      onChange={() => setExpanded(!expanded)}
-    >
-      <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam.
-      </Text>
-    </Accordion>
-  );
-};
-``` -->
-
 ## Picker
 
 | Property        | Type     |
@@ -366,25 +160,6 @@ const AccordionComponent = () => {
 | pickerItemStyle | Object   |
 | pickerTextStyle | Object   |
 
-<!-- ```js
-import React, { useState } from "react";
-import { Picker } from "react-native-ui-modules";
-
-const PickerComponent = () => {
-  const [selectedItem, setSelectedItem] = useState("");
-  const pickerItems = ["Javascript", "Typescript", "Python", "NodeJS"];
-  return (
-    <Picker
-      width="80%"
-      bgColor="#fff"
-      pickerItems={pickerItems}
-      selectedItem={selectedItem}
-      onValueChange={(item) => setSelectedItem(item)}
-    />
-  );
-};
-``` -->
-
 ## Dialog
 
 | Property         | Type                                   |
@@ -395,79 +170,6 @@ const PickerComponent = () => {
 | onClose          | Function                               |
 | dialogContainer  | Object                                 |
 | buttonTitleStyle | Object                                 |
-
-<!-- ```js
-import React, { useState } from "react";
-import { Button } from "react-native";
-import { Dialog } from "react-native-ui-modules";
-
-const DialogComponent = () => {
-  const [showDialog, setDialog] = useState(false);
-  return (
-    <>
-      <Button title="Show Dialog" onPress={() => setDialog(!showDialog)} />
-      <Dialog
-        type="bottomSheet"
-        dialogContainer={{
-          dialogStyle: {
-            dialogWidth: "85%",
-            dialogBackgroundColor: "#fff",
-          },
-          dialogHeaderStyle: {
-            iconColor: "#343434",
-            headerBgColor: "#fff",
-            dialogTitleColor: "#000",
-            alignDialogTitle: "center",
-          },
-          dialogHeaderComponent: {
-            renderHeader: true,
-            dialogTitle: "Heading",
-            renderCloseIcon: true,
-          },
-          dialogFooterStyle: {
-            buttonDirection: "column",
-            alignFooterButton: "center",
-            primaryButtonColor: "teal",
-            secondaryButtonColor: "gray",
-            primaryButtonWidth: "25%",
-            secondaryButtonWidth: "25%",
-            primaryButtonRadius: 1,
-            secondaryButtonRadius: 1,
-          },
-          dialogFooterComponent: {
-            renderFooterButton: true,
-            renderButtonGroup: true,
-            renderSingleButton: false,
-            secondaryButtonTitle: "Discard",
-            primaryButtonTitle: "Save",
-            primaryButtonPress: () => {
-              setDialog(!showDialog);
-            },
-            secondaryButtonPress: () => {
-              setDialog(!showDialog);
-            },
-          },
-        }}
-        buttonTitleStyle={{
-          fontWeight: "500",
-          color: "#fff",
-        }}
-        cancelable={() => {}}
-        visible={showDialog}
-        onClose={() => setDialog(!showDialog)}
-      >
-        <View>
-          <Text style={{ color: "#000" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
-          </Text>
-        </View>
-      </Dialog>
-    </>
-  );
-};
-``` -->
 
 ## License
 
