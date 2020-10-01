@@ -4,16 +4,17 @@ import styles from "./styles/styles";
 import { View, Text, TouchableOpacity } from "react-native";
 
 const Card = (props) => {
+  const { onPress, headerStyle, headerTextStyle, cardTitle, children } = props;
   return (
     <TouchableOpacity
       activeOpacity={0.9}
-      onPress={() => props.onPress()}
+      onPress={() => onPress()}
       style={styles(props).card}
     >
-      <View style={props.headerStyle}>
-        <Text style={props.headerTextStyle}>{props.cardTitle}</Text>
+      <View style={headerStyle}>
+        <Text style={headerTextStyle}>{cardTitle}</Text>
       </View>
-      {props.children}
+      {children}
     </TouchableOpacity>
   );
 };

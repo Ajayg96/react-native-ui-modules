@@ -4,15 +4,16 @@ import styles from "./styles/styles";
 import { View, Modal, ActivityIndicator } from "react-native";
 
 const Spinner = (props) => {
+  const { visible, onClose, size, color } = props;
   return (
     <Modal
       transparent={true}
-      visible={props.visible}
-      onRequestClose={() => props.onClose()}
+      visible={visible}
+      onRequestClose={() => onClose()}
     >
       <View style={styles(props).spinnerContainer}>
         <View style={styles(props).spinner}>
-          <ActivityIndicator size={props.size} color={props.color} />
+          <ActivityIndicator size={size} color={color} />
         </View>
       </View>
     </Modal>

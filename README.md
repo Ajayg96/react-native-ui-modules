@@ -1,6 +1,6 @@
 <h1 style="text-align: center">React Native Components</h1>
 
-Cross platform react native components https://zealous-snyder-a3ec60.netlify.app/
+Cross platform react native components https://react-native-components.netlify.app
 
 <div style="text-align: center">
   <img src="https://badgen.net/badge/node@LTS/>=12.11.1/green">

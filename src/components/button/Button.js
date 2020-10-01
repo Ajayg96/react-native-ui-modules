@@ -5,45 +5,43 @@ import styles from "./styles/styles";
 import { View, Text, TouchableOpacity } from "react-native";
 
 const Button = (props) => {
+  const { startIcon, endIcon, variant, buttonStyle, titleStyle, title } = props;
+
   let buttonWidth;
-  props.startIcon || props.endIcon
-    ? (buttonWidth = "90%")
-    : (buttonWidth = "100%");
+  startIcon || endIcon ? (buttonWidth = "90%") : (buttonWidth = "100%");
 
   return (
     <TouchableOpacity
       {...props}
       activeOpacity={0.8}
       style={[
-        props.variant === "contained"
+        variant === "contained"
           ? styles(props).contained
-          : props.variant === "outlined" && styles(props).outlined,
-        props.buttonStyle,
+          : variant === "outlined" && styles(props).outlined,
+        buttonStyle,
       ]}
     >
-      {props.startIcon && (
+      {startIcon && (
         <View style={styles(props).icon}>
           <Icon
-            type={props.startIcon.iconType}
-            name={props.startIcon.iconName}
-            size={props.startIcon.iconSize}
-            color={props.startIcon.iconColor}
+            type={startIcon?.iconType}
+            name={startIcon?.iconName}
+            size={startIcon?.iconSize}
+            color={startIcon?.iconColor}
             style={styles(props).buttonIcon}
           />
         </View>
       )}
       <View style={[styles(props).button, { width: buttonWidth }]}>
-        <Text style={[styles(props).buttonTitle, props.titleStyle]}>
-          {props.title}
-        </Text>
+        <Text style={[styles(props).buttonTitle, titleStyle]}>{title}</Text>
       </View>
-      {props.endIcon && (
+      {endIcon && (
         <View style={styles(props).icon}>
           <Icon
-            type={props.endIcon.iconType}
-            name={props.endIcon.iconName}
-            size={props.endIcon.iconSize}
-            color={props.endIcon.iconColor}
+            type={endIcon?.iconType}
+            name={endIcon?.iconName}
+            size={endIcon?.iconSize}
+            color={endIcon?.iconColor}
             style={styles(props).buttonIcon}
           />
         </View>

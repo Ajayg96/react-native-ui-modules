@@ -5,31 +5,45 @@ import styles from "./styles/styles";
 import { View, TextInput, TouchableOpacity } from "react-native";
 
 const Input = (props) => {
+  const {
+    icon,
+    type,
+    variant,
+    endIcon,
+    multiline,
+    startIcon,
+    togglePassword,
+    passwordHidden,
+  } = props;
+
   let hitSlop = { top: 15, left: 15, right: 15, bottom: 15 };
+
   let inputWidth;
-  props.startIcon && props.type === "password"
+
+  startIcon && type === "password"
     ? (inputWidth = "80%")
-    : props.startIcon
+    : startIcon
     ? (inputWidth = "90%")
-    : props.type === "password"
+    : type === "password"
     ? (inputWidth = "90%")
     : (inputWidth = "100%");
+
   return (
     <View
       style={
-        props.variant === "outlined"
+        variant === "outlined"
           ? styles(props).outlined
-          : props.variant === "standard" && styles(props).standard
+          : variant === "standard" && styles(props).standard
       }
     >
-      {props.startIcon && (
+      {startIcon && (
         <View style={styles(props).icon}>
-          {props.icon && (
+          {icon && (
             <Icon
-              type={props.icon.iconType}
-              name={props.icon.iconName}
-              size={props.icon.iconSize}
-              color={props.icon.iconColor}
+              type={icon?.iconType}
+              name={icon?.iconName}
+              size={icon?.iconSize}
+              color={icon?.iconColor}
               style={styles(props).inputIcon}
             />
           )}
@@ -38,28 +52,25 @@ const Input = (props) => {
       <TextInput
         style={[
           styles(props).input,
-          props.multiline && styles(props).multlineInput,
+          multiline && styles(props).multilineInput,
           { width: inputWidth },
         ]}
         {...props}
-        secureTextEntry={props.type === "password" && props.passwordHidden}
+        secureTextEntry={type === "password" && passwordHidden}
       />
-      {props.type === "password" && (
+      {type === "password" && (
         <View style={styles(props).icon}>
-          <TouchableOpacity
-            onPress={() => props.togglePassword()}
-            hitSlop={hitSlop}
-          >
-            {props.endIcon && (
+          <TouchableOpacity onPress={() => togglePassword()} hitSlop={hitSlop}>
+            {endIcon && (
               <Icon
-                type={props.endIcon.iconType}
+                type={endIcon?.iconType}
                 name={
-                  props.passwordHidden
-                    ? props.endIcon.passwordOffIcon
-                    : props.endIcon.passwordOnIcon
+                  passwordHidden
+                    ? endIcon?.passwordOffIcon
+                    : endIcon?.passwordOnIcon
                 }
-                size={props.endIcon.iconSize}
-                color={props.endIcon.iconColor}
+                size={endIcon?.iconSize}
+                color={endIcon?.iconColor}
                 style={styles(props).inputIcon}
               />
             )}

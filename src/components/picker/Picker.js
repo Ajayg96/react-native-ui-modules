@@ -5,7 +5,16 @@ import styles from "./styles/styles";
 import { View, Text, TouchableOpacity } from "react-native";
 
 const Picker = (props) => {
+  const {
+    pickerItems,
+    selectedItem,
+    onValueChange,
+    pickerItemStyle,
+    pickerTextStyle,
+  } = props;
+
   const [expanded, onChange] = useState(false);
+
   return (
     <TouchableOpacity
       activeOpacity={1}
@@ -13,9 +22,9 @@ const Picker = (props) => {
       onPress={() => onChange(!expanded)}
     >
       <View style={styles(props).rowContainer}>
-        <Text style={props.pickerTextStyle}>
-          {props.selectedItem ? "Selected: " : "Select"}
-          {props.selectedItem}
+        <Text style={pickerTextStyle}>
+          {selectedItem ? "Selected: " : "Select"}
+          {selectedItem}
         </Text>
         <Icon
           size={23}
@@ -25,17 +34,17 @@ const Picker = (props) => {
         />
       </View>
       {expanded &&
-        props.pickerItems.map((item, index) => (
+        pickerItems.map((item, index) => (
           <TouchableOpacity
             key={index}
             activeOpacity={1}
             onPress={() => {
               onChange(!expanded);
-              props.onValueChange(item);
+              onValueChange(item);
             }}
             style={styles(props).pickerItemContainer}
           >
-            <Text style={props.pickerItemStyle}>{item}</Text>
+            <Text style={pickerItemStyle}>{item}</Text>
           </TouchableOpacity>
         ))}
     </TouchableOpacity>

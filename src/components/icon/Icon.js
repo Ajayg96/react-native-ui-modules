@@ -16,38 +16,44 @@ import {
 } from "../../static/constants";
 import PropTypes from "prop-types";
 
-const Icon = (props) => {
+const IconType = (props) => {
+  const { type } = props;
   return (
     <>
-      {props.type === "materialIcon" ? (
+      {type === "materialIcon" ? (
         <MaterialIcon {...props} />
-      ) : props.type === "materialCommunityIcon" ? (
+      ) : type === "materialCommunityIcon" ? (
         <MaterialCommunityIcon {...props} />
-      ) : props.type === "entypo" ? (
+      ) : type === "entypo" ? (
         <Entypo {...props} />
-      ) : props.type === "zocial" ? (
+      ) : type === "zocial" ? (
         <Zocial {...props} />
-      ) : props.type === "feather" ? (
+      ) : type === "feather" ? (
         <Feather {...props} />
-      ) : props.type === "ionIcons" ? (
+      ) : type === "ionIcons" ? (
         <Ionicons {...props} />
-      ) : props.type === "octIcons" ? (
+      ) : type === "octIcons" ? (
         <Octicons {...props} />
-      ) : props.type === "evilIcons" ? (
+      ) : type === "evilIcons" ? (
         <EvilIcons {...props} />
-      ) : props.type === "antDesign" ? (
+      ) : type === "antDesign" ? (
         <AntDesign {...props} />
-      ) : props.type === "foundation" ? (
+      ) : type === "foundation" ? (
         <Foundation {...props} />
-      ) : props.type === "fontAwesome" ? (
+      ) : type === "fontAwesome" ? (
         <FontAwesome {...props} />
-      ) : props.type === "fontAwesome5" ? (
+      ) : type === "fontAwesome5" ? (
         <FontAwesome5 {...props} />
       ) : (
-        props.type === "simpleLineIcons" && <SimpleLineIcons {...props} />
+        type === "simpleLineIcons" && <SimpleLineIcons {...props} />
       )}
     </>
   );
+};
+
+const Icon = (props) => {
+  const { type } = props;
+  return <IconType type={type} {...props} />;
 };
 
 Icon.propTypes = {

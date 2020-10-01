@@ -5,29 +5,38 @@ import styles from "./styles/styles";
 import { View, Text, TouchableOpacity } from "react-native";
 
 const Accordion = (props) => {
+  const {
+    heading,
+    children,
+    expanded,
+    onChange,
+    headingStyle,
+    secondaryStyle,
+    secondaryHeading,
+  } = props;
   return (
     <TouchableOpacity
-      onPress={() => props.onChange()}
+      onPress={() => onChange()}
       activeOpacity={1}
       style={styles(props).accordion}
     >
       <View style={styles(props).rowContainer}>
-        <Text style={props.headingStyle}>{props.heading}</Text>
-        <Text style={props.secondaryStyle}>{props.secondaryHeading}</Text>
+        <Text style={headingStyle}>{heading}</Text>
+        <Text style={secondaryStyle}>{secondaryHeading}</Text>
         <Icon
           size={23}
           color="#000"
           type="materialIcon"
-          name={props.expanded ? "keyboard-arrow-up" : "keyboard-arrow-down"}
+          name={expanded ? "keyboard-arrow-up" : "keyboard-arrow-down"}
         />
       </View>
-      {props.expanded && (
+      {expanded && (
         <TouchableOpacity
           activeOpacity={1}
           onPress={() => {}}
           style={styles(props).expansionSummary}
         >
-          {props.children}
+          {children}
         </TouchableOpacity>
       )}
     </TouchableOpacity>

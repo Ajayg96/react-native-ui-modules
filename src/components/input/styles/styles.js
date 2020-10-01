@@ -36,7 +36,7 @@ const styles = (props) =>
     icon: {
       width: "10%",
     },
-    multlineInput: {
+    multilineInput: {
       textAlignVertical: "top",
     },
   });
